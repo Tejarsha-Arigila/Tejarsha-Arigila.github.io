@@ -55,13 +55,17 @@ p {
   margin-bottom: 10px;
 }
 
-/* Project section styling */
-.project {
+/* Experience section styling */
+.experience {
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  padding-left: 20px; /* Adjust the desired indentation value */
 }
 
 /* Contact section styling */
@@ -83,4 +87,49 @@ footer {
     display: block;
     margin-bottom: 10px;
   }
+}
+
+/* Animation for revealing sections */
+.scroll-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-section.section-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-visible {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Custom changes */
+
+/* Intro section styling */
+#intro-section {
+  color: #454545;
+  text-align: center;
+  padding: 50px;
+}
+
+#intro-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#intro-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cover-image {
+  width: 100%;
+  height: auto;
+  max-width: 2000px;
+  max-height: 191px;
+  object-fit: cover;
 }
