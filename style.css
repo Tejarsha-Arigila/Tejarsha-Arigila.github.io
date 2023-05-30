@@ -66,7 +66,7 @@ p {
 }
 
 ul {
-  padding-left: 20px; /* Adjust the desired indentation value */
+  padding-left: 20px;
 }
 
 /* Contact section styling */
@@ -107,8 +107,6 @@ footer {
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-
-/* Custom changes */
 
 /* Intro section styling */
 #intro-section {

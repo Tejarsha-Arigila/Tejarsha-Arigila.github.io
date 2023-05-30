@@ -66,6 +66,6 @@ navLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = link.getAttribute('href');
-    smoothScroll(target, 1000); // Adjust duration (in milliseconds) as desired
+    smoothScroll(target, 1000);
   });
 });
