@@ -10,8 +10,14 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Header styling */
+/* Header and navigation styling */
 header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav {
   background-color: #333;
   color: #fff;
   padding: 20px;
@@ -19,6 +25,8 @@ header {
 
 nav ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -31,6 +39,15 @@ nav ul li a {
   color: #fff;
   font-weight: bold;
   transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+/* LinkedIn badges script override */
+.LI-profile-badge nav {
+  padding: 20px !important;
 }
 
 /* Main section styling */
@@ -129,6 +146,6 @@ footer {
   width: 100%;
   height: auto;
   max-width: 2000px;
-  max-height: 191px;
+  max-height: 325px;
   object-fit: cover;
 }
