@@ -1,6 +1,15 @@
-// Function to check if an element is in the viewport
+// Get all the required elements
+const sections = document.querySelectorAll('.scroll-section');
+const introSection = document.getElementById('intro-section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+/**
+ * Check if an element is in the viewport.
+ * @param {HTMLElement} element - The element to check.
+ * @returns {boolean} - True if the element is in the viewport, false otherwise.
+ */
 function isInViewport(element) {
-  var rect = element.getBoundingClientRect();
+  const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
@@ -9,30 +18,42 @@ function isInViewport(element) {
   );
 }
 
-// Function to handle the scroll event
-function handleScroll() {
-  var sections = document.querySelectorAll('.scroll-section');
-  var introSection = document.getElementById('intro-section');
-
-  sections.forEach(function(section) {
+/**
+ * Show or hide the section based on its visibility in the viewport.
+ */
+function toggleSectionVisibility() {
+  sections.forEach((section) => {
     if (isInViewport(section)) {
       section.classList.add('section-reveal');
     } else {
       section.classList.remove('section-reveal');
     }
   });
+}
 
-  var scrollPosition = window.pageYOffset;
-  var introSectionHeight = introSection.offsetHeight;
-  var introSectionOpacity = 1 - (scrollPosition / introSectionHeight);
-
+/**
+ * Modify the opacity of the introduction section based on the scroll position.
+ */
+function adjustIntroSectionOpacity() {
+  const scrollPosition = window.pageYOffset;
+  const introSectionHeight = introSection.offsetHeight;
+  const introSectionOpacity = 1 - (scrollPosition / introSectionHeight);
   introSection.style.opacity = introSectionOpacity.toFixed(2);
 }
 
-// Add event listener for scroll event
-window.addEventListener('scroll', handleScroll);
+/**
+ * The scroll event handler.
+ */
+function handleScroll() {
+  toggleSectionVisibility();
+  adjustIntroSectionOpacity();
+}
 
-// Smooth scrolling function
+/**
+ * Smoothly scroll to the given target.
+ * @param {string} target - The selector of the target to scroll to.
+ * @param {number} duration - The duration of the scrolling animation in milliseconds.
+ */
 function smoothScroll(target, duration) {
   const targetElement = document.querySelector(target);
   const targetPosition = targetElement.offsetTop;
@@ -59,13 +80,21 @@ function smoothScroll(target, duration) {
   requestAnimationFrame(animation);
 }
 
-// Smooth scroll when clicking on navigation links
-const navLinks = document.querySelectorAll('nav ul li a');
-
-navLinks.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = link.getAttribute('href');
-    smoothScroll(target, 1000);
+/**
+ * Attach click events to navigation links for smooth scrolling.
+ */
+function attachSmoothScrollToNavLinks() {
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = link.getAttribute('href');
+      smoothScroll(target, 1000);
+    });
   });
-});
+}
+
+// Add event listener for scroll event
+window.addEventListener('scroll', handleScroll);
+
+// Attach smooth scroll to navigation links
+attachSmoothScrollToNavLinks();

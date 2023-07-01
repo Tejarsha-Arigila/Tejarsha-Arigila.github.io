@@ -1,91 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejarsha Arigila</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="script.js" type="text/javascript"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script src="script.js" defer></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
+
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#about" style="color:grey">About</a></li>
-                <li><a href="#experience" style="color:grey">Career</a></li>
-                <li><a href="#education" style="color:grey">Education</a></li>
-                <li><a href="#contact" style="color:grey">Contact</a></li>
+            <ul class="nav nav__list">
+              <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="#experience" class="nav__link">Career</a></li>
+              <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+              <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+              <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
-        </nav>
+          </nav>
     </header>
 
     <main>
         <section id="intro-section">
-            <h1>Welcome</h1>
-            <img src="cover.png" class="cover-image">
+            <img src="cover.png" alt="Cover Image" class="cover-image">
         </section>
-        <br>
+
         <section id="about" class="scroll-section">
             <h1>About Me</h1>
-            <p>
+            <!-- Description -->
+            <p class="description">
                 Welcome to my portfolio website! I'm passionate about Data Science, Machine Learning, and Web Development. As I progress in my academic and professional journey, I'm thrilled to collaborate with fellow technologists and contribute to cutting-edge projects that can transform the world. I'm on a mission to harness the power of technology and apply it to real-world problems.
             </p>
-            <div class="badge-base LI-profile-badge" align="center"data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="arigila-tejarsha" data-version="v1"></div>
+            <br>
+            <!-- LinkedIn Badge -->
+            <div class="badge-base LI-profile-badge" align="center" data-locale="en_US" data-size="large"
+                data-theme="light" data-type="VERTICAL" data-vanity="arigila-tejarsha" data-version="v1"></div>
         </section>
-        <br>
         <section id="experience" class="scroll-section">
-            
             <h1>Career</h1>
-            <ul>
+            <br>
+            <div class="content">
+            <!-- Experience list -->
+            <ul class="experience-list">
+                <!-- Experience item -->
                 <li>
                     <p>
-                        Computer Science Intern, <i class="fas fa-building"></i><a href="https://esolutionsfirst.com/">eSolutionsFirst LLC</a>, June 2023 - Present
+                        Computer Science Intern, <i class="fas fa-building"></i> <a
+                            href="https://esolutionsfirst.com/">eSolutionsFirst LLC</a>, June 2023 - Present
                     </p>
                 </li>
                 <li>
                     <p>
-                        Student Research Lab Assistant, <i class="fas fa-university"></i><a href="https://www.ku.edu">University of Kansas</a>, March 2023 - May 2023
+                        Student Research Lab Assistant, <i class="fas fa-university"></i><a 
+                        href="https://www.ku.edu">University of Kansas</a>, March 2023 - May 2023
                     </p>
                 </li>
                 <li>
                     <p>
-                        Software Engineer, <i class="fas fa-building"></i><a href="https://www.optum.com">Optum</a>, July 2020 - July 2022
+                        Software Engineer, <i class="fas fa-building"></i><a 
+                        href="https://www.optum.com">Optum</a>, July 2020 - July 2022
                     </p>
                 </li>
                 <li>
                     <p>
-                        Trainee, <i class="fas fa-shield-alt"></i><a href="https://www.drdo.gov.in">Defence R&D Organization</a>, May 2018 - July 2018
+                        Trainee, <i class="fas fa-shield-alt"></i><a 
+                        href="https://www.drdo.gov.in">Defence R&D Organization</a>, May 2018 - July 2018
                     </p>
                 </li>
             </ul>
+            </div>
         </section>
         <br>
         <section id="education" class="scroll-section">
             <h1>Education</h1>
-
-            <ul>
+            <br>
+            <div class="content">
+            <!-- Education list -->
+            <ul class="education-list">
+                <!-- Education item -->
                 <li>
                     <p>
-                        Master of Science in Computer Science, <i class="fas fa-university"></i><a href="https://www.ku.edu">University of Kansas</a>, August 2022 - Present
+                        Master of Science in Computer Science, <i class="fas fa-university"></i> <a
+                            href="https://www.ku.edu">University of Kansas</a>, August 2022 - Present
                     </p>
                 </li>
                 <li>
                     <p>
-                        Bachelor of Technology in Computer Science & Engineering, <i class="fas fa-university"></i><a href="https://www.kluniversity.in">K L University</a>, July 2016 - May 2020
+                        Bachelor of Technology in Computer Science & Engineering, <i class="fas fa-university"></i><a 
+                        href="https://www.kluniversity.in">K L University</a>, July 2016 - May 2020
                     </p>
                 </li>
             </ul>
+            </div>
+        </section>
+        <br>
+        <section id="projects" class="scroll-section">
+            <h1>Projects</h1>
+            <br>
+            <div class="content">
+            <!-- Project list -->
+            <ul class="project-list">
+                <!-- Project item -->
+                <li>
+                    <h2><a href="https://github.com/Tejarsha-Arigila/Age-Gender-Emotion-Analyzer">AGenEmozer</a></h2>
+                    <p>AGenEmozer (Age, Gender, and Emotion Analyzer) is an AI-powered tool that leverages advanced machine learning to accurately predict and analyze a person's age, gender, and emotional state from images in real-time.</p>
+                </li>
+                <li>
+                    <h2><a href="https://github.com/Tejarsha-Arigila/Sequence-Alignment-Toolkit">Sequence Alignment Toolkit</a></h2>
+                    <p>This project provides a set of tools to compare and align two sequences of characters, such as DNA or protein sequences. It helps identify regions of similarity or difference between the sequences. The project includes two alignment methods: one that aligns the entire sequences and another that focuses on aligning specific regions.</p>
+                </li>
+            </ul>
+            </div>
         </section>
         <br>
         <section id="contact" class="scroll-section">
             <h1>Contact Me</h1>
-
-            <p>
+            <br>
+            <div class="content">
+            <!-- Description -->
+            <p class="description">
                 Feel free to reach out to me if you have any questions, opportunities, or just want to connect. I'm always excited to collaborate and explore new possibilities!
             </p>
-            <ul>
+            <!-- Contact list -->
+            <ul class="contact-list">
+                <!-- Contact item -->
                 <li>
                     <i class="fas fa-phone"></i>
                     <a href="tel:785-325-4012">+1(785)325-4012</a>
@@ -100,6 +142,7 @@
                     </a>
                 </li>
             </ul>
+            </div>
         </section>
     </main>
 
@@ -107,4 +150,5 @@
         <p>&copy; 2023 Arigila Tejarsha. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

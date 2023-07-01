@@ -1,117 +1,119 @@
-/* Reset default margin and padding */
-body, h1, h2, h3, h4, h5, h6, p, ul, li {
-  margin: 0;
-  padding: 0;
+/* Define variables for reusable properties */
+:root {
+  --font-family: Arial, sans-serif;
+  --color-background-dark: #333;
+  --color-background-light: #f0f0f0;
+  --color-background-card: #fff;
+  --color-text-dark: #454545;
+  --color-text-light: #fff;
+  --color-text-link: #000;
+  --color-text-link-hover: #999;
+  --color-text-hover: #ccc;
+  --transition-standard: 0.5s ease;
+  --color-nav-background: #000000;
+  --color-nav-text: #ffffff;
+  --color-nav-text-hover: #ddd;
 }
 
-/* Set default font and background */
+/* Remove default margin and padding */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: var(--font-family);
+  background-color: var(--color-background-light);
 }
 
-/* Header and navigation styling */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+.nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: var(--color-nav-background);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
+.nav__list {
+  display: flex;
+  justify-content: left;
   padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
-nav ul li {
+.nav__item:not(:last-child) {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
-nav ul li a {
+.nav__link, .projects__link {
   text-decoration: none;
-  color: #fff;
+  color: var(--color-nav-text);
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color var(--transition-standard);
+  padding: 10px 20px;
+  display: block;
 }
 
-nav ul li a:hover {
-  color: #ccc;
+.nav__link:hover, .projects__link:hover {
+  color: var(--color-nav-text-hover);
 }
 
-/* LinkedIn badges script override */
-.LI-profile-badge nav {
-  padding: 20px !important;
-}
-
-/* Main section styling */
-main {
+.main {
   padding: 20px;
-}
-
-section {
-  margin-bottom: 30px;
 }
 
 h1 {
   font-size: 24px;
   margin-bottom: 10px;
+  background-color: var(--color-nav-background);
+  color: var(--color-nav-text);
+  padding: 10px;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 5px;
+}
+
+.cover-image {
+  width: 100%;
+  height: auto;
+  max-width: 2000px;
+  max-height: 325px;
+  object-fit: cover; 
+  object-position: bottom; 
 }
 
 p {
   margin-bottom: 10px;
 }
 
-/* Experience section styling */
-.experience {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.content {
+  margin-left: 40px; 
 }
 
-ul {
-  padding-left: 20px;
-}
-
-/* Contact section styling */
-ul li {
-  margin-bottom: 5px;
-}
-
-/* Footer styling */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
   text-align: center;
+  background-color: var(--color-nav-background);
+  color: var(--color-nav-text);
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media queries for responsive design */
+
 @media screen and (max-width: 768px) {
-  nav ul li {
-    display: block;
+  .nav__item {
     margin-bottom: 10px;
   }
 }
 
-/* Animation for revealing sections */
 .scroll-section {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity var(--transition-standard), transform var(--transition-standard);
 }
 
 .scroll-section.section-reveal {
@@ -122,30 +124,72 @@ footer {
 .section-visible {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity var(--transition-standard), visibility var(--transition-standard);
 }
 
-/* Intro section styling */
-#intro-section {
-  color: #454545;
+.intro {
+  color: var(--color-text-dark);
   text-align: center;
   padding: 50px;
 }
 
-#intro-section h1 {
+.intro__header {
   font-size: 36px;
   margin-bottom: 20px;
 }
 
-#intro-section p {
+.intro__text {
   font-size: 18px;
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 
-.cover-image {
-  width: 100%;
-  height: auto;
-  max-width: 2000px;
-  max-height: 325px;
-  object-fit: cover;
+.intro__action {
+  text-decoration: none;
+  color: var(--color-text-light);
+  background-color: var(--color-background-dark);
+  padding: 10px 20px;
+  display: inline-block;
+  transition: background-color var(--transition-standard), color var(--transition-standard);
+}
+
+.intro__action:hover {
+  background-color: var(--color-text-light);
+  color: var(--color-background-dark);
+}
+
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.projects__item {
+  background-color: var(--color-background-card);
+  padding: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.projects__header {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.projects__text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.projects__link {
+  text-decoration: none;
+  color: var(--color-text-link);
+  transition: color var(--transition-standard);
+}
+
+.projects__link:hover {
+  color: var(--color-text-link-hover);
 }
