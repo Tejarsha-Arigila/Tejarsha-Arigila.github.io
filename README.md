@@ -28,7 +28,7 @@ The project is organized as follows:
 As this is a personal website, contributions will not be accepted. However, you're welcome to use the code as a reference for your own projects.
 
 ### Authors
-Tejarsha Arigila
+**Tejarsha Arigila**
 
 ### License
 This project is licensed under the MIT License - see the [License](LICENSE) file for details.
