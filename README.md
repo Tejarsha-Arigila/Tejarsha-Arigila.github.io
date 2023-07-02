@@ -24,7 +24,7 @@ As this is a personal website, contributions will not be accepted. However, you'
 Tejarsha Arigila
 
 ### License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [License](LICENSE) file for details.
 
 ### Acknowledgments
 Many thanks to those who inspired me in this journey of web development.
