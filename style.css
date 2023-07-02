@@ -105,7 +105,11 @@ footer {
 
 
 @media screen and (max-width: 768px) {
-  .nav__item {
+  .nav__list {
+    flex-direction: column;
+  }
+  .nav__item:not(:last-child) {
+    margin-right: 0;
     margin-bottom: 10px;
   }
 }
