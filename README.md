@@ -20,9 +20,9 @@ You need to have a modern web browser (like Firefox, Chrome, Edge, Safari) insta
 ### Structure
 The project is organized as follows:
 
-- 'index.html': The main landing page of the website.
-- 'styles.css': Contains all the CSS styles used across the website.
-- 'script.js': Contains JavaScript code that's responsible for handling user interactions like the navigation menu.
+- `index.html`: The main landing page of the website.
+- `styles.css`: Contains all the CSS styles used across the website.
+- `script.js`: Contains JavaScript code that's responsible for handling user interactions like the navigation menu.
   
 ### Contributing
 As this is a personal website, contributions will not be accepted. However, you're welcome to use the code as a reference for your own projects.
