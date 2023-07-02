@@ -9,15 +9,7 @@
 
 This is the source code for my personal website. It's built using HTML, CSS, and JavaScript with a focus on simplicity and ease of use.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
-
-You need to have a modern web browser (like Firefox, Chrome, Edge, Safari) installed on your machine.
-
-### Structure
+## Structure
 The project is organized as follows:
 
 - `index.html`: The main landing page of the website.
